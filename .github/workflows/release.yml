@@ -3,7 +3,7 @@ name: Release
 on:
   push:
     branches:
-      - main
+      - developdevelop
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
@@ -35,8 +35,8 @@ jobs:
         with:
           publish: pnpm release
           version: pnpm changeset version
-          commit: "chore: release packages"
-          title: "chore: release packages"
+          commit: 'chore: release packages'
+          title: 'chore: release packages'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
